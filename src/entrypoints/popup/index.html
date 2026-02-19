@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Vault</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Chat Vault</h1>
+      <p id="status" class="status">Detecting platform...</p>
+    </header>
+
+    <section id="controls" class="controls hidden">
+      <div class="format-group">
+        <label>Export Format</label>
+        <div class="radio-group">
+          <label><input type="radio" name="format" value="json" checked /> JSON</label>
+          <label><input type="radio" name="format" value="markdown" /> Markdown</label>
+          <label><input type="radio" name="format" value="both" /> Both</label>
+        </div>
+      </div>
+
+      <button id="export-btn" class="export-btn">Export Conversation</button>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div id="result-info" class="result-info"></div>
+    </section>
+
+    <section id="error-section" class="error-section hidden">
+      <p id="error-message" class="error-message"></p>
+    </section>
+
+    <footer>
+      <p class="privacy">Zero network requests. Your data stays local.</p>
+    </footer>
+  </div>
+
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>
